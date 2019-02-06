@@ -1,0 +1,116 @@
+{
+  "self": {
+    "id": "aabe3c12-99b0-4923-a08c-dde5b1b41129",
+    "title": "Road",
+    "price": 599
+  },
+  "paint": [
+    {
+      "id": "900e5930-fd12-4c8a-82b6-1d0d94f80992",
+      "title": "Bonjour White",
+      "hex": "#e2e2e2",
+      "price": 0
+    },
+    {
+      "id": "b146149f-6ac9-43aa-8140-a8e547aa1677",
+      "title": "Oxford Blue",
+      "hex": "#394756",
+      "price": 0
+    },
+    {
+      "id": "6ec90ed6-7c32-4df2-9101-1e321db82dc5",
+      "title": "Kaitoke Green",
+      "hex": "#265439",
+      "price": 0
+    },
+    {
+      "id": "933edfb8-ee98-49c8-b366-bfa1d98b3113",
+      "title": "Valencia",
+      "hex": "#dc4b4e",
+      "price": 100
+    },
+    {
+      "id": "410ae21a-c6fd-44fe-9d94-10c7b72e5943",
+      "title": "Pacific Blue Metallic",
+      "hex": "#00a6c9",
+      "price": 150
+    }
+    {
+      "id": "93c86df1-7597-48be-b6d5-577a840f5a8e",
+      "title": "Crusta Metallic",
+      "hex": "#f4762f",
+      "price": 150
+    }
+  ],
+  "drivetrain": [
+    {
+      "id": "ba99da05-c00d-4588-a471-2fbf94e6de5f",
+      "title": "Impeto Sola 1",
+      "price": 0
+    },
+    {
+      "id": "54036c0b-8d36-43af-9858-c0f901b5e218",
+      "title": "Impeto Bulvardo 3",
+      "price": 0
+    },
+    {
+      "id": "ef2baa59-a717-4952-995a-82a60764da4a",
+      "title": "Impeto Brizo 7",
+      "price": 50
+    },
+    {
+      "id": "f9df489d-bd48-48e5-a1d9-27de72d7bf67",
+      "title": "Impeto Brizo 8",
+      "price": 60
+    },
+    {
+      "id": "0fe5103d-ea91-421b-8a12-55c918d9f6f9",
+      "title": "Impeto Pelado 11",
+      "price": 120
+    },
+    {
+      "id": "9224e249-d24b-4fcd-bf5c-c9a817267eeb",
+      "title": "Dynamik R1400SL",
+      "price": 480
+    }
+  ],
+  "pedal": [
+    {
+      "id": "5d7e91fb-0412-441a-a1d8-0d1ccc5fd52b",
+      "title": "Road Clipless",
+      "price": 0
+    },
+    {
+      "id": "d68cbf2f-6820-4464-96c9-fcdf57bd6b9a",
+      "title": "Mountain Clipless",
+      "price": 0
+    },
+    {
+      "id": "e8b50f3e-2550-4099-b54e-ab6a7a4adbf7",
+      "title": "Hybrid Clipless",
+      "price": 20
+    },
+    {
+      "id": "49abed6a-6f7f-4ab6-893f-35db82674ab7",
+      "title": "Platform",
+      "price": 0
+    }
+  ],
+  "saddle": [
+    {
+      "id": "e155f234-22fa-48a7-b0ae-d3852f2960fe",
+      "title": "Orion Pro Uno",
+      "price": 0
+    },
+    {
+      "id": "acdc14d4-bca0-4a05-a9b9-25d37a4bdc9c",
+      "title": "Race Italia SLR Gel Flow",
+      "price": 100
+    },
+    {
+      "id": "792fac1f-675f-41bd-9c08-be6851729dd4",
+      "title": "Foxford Heritage F17",
+      "price": 200
+    }
+  ]
+}
