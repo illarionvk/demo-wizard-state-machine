@@ -1,13 +1,16 @@
 import axios from 'axios'
 
+import { store } from '../../ducks'
+import { bicycle } from '../../ducks/bicycle'
+
 const { PUBLIC_URL = '' } = process.env
 
 export const world = {
   loadBicycles: async function loadBicycles() {
-    const data = await axios({
+    const { data } = await axios({
       url: PUBLIC_URL + '/data/bicycles.json'
     })
 
-    return data
+    store.dispatch(bicycle.add(data))
   }
 }

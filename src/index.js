@@ -6,6 +6,7 @@ import './index.css'
 import { App } from './components/app'
 import * as serviceWorker from './serviceWorker'
 
+import { store } from './ducks'
 import { wizard } from './machines'
 
 ReactDOM.render(<App />, document.getElementById('root'))

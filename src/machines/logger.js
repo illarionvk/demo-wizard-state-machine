@@ -1,6 +1,8 @@
 import logger from 'andlog'
 import { get } from 'lodash/fp'
 
+import { store } from '../ducks'
+
 export const Logger = {
   onActionDispatched(actionName, ...args) {
     if (args.length === 0) {
@@ -10,13 +12,13 @@ export const Logger = {
     }
   },
   onStateChanged() {
-    // store.dispatch({
-    //   meta: {
-    //     name: this.name,
-    //     state: this.state
-    //   },
-    //   type: 'bundler/machine/CHANGE_STATE'
-    // })
+    store.dispatch({
+      meta: {
+        name: this.name,
+        state: this.state
+      },
+      type: 'app/machine/CHANGE_STATE'
+    })
     logger.info(`${this.name}: state changed`, this.state)
   },
   onGeneratorStep(yielded /*: * */) {
