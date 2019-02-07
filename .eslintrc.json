@@ -1,0 +1,124 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "commonjs": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "curly": [
+      "error"
+    ],
+    "eqeqeq": [
+      "error",
+      "smart"
+    ],
+    "no-shadow": [
+      "error",
+      {
+        "allow": [
+          "cb"
+        ]
+      }
+    ],
+    "no-use-before-define": [
+      "error"
+    ],
+    "prefer-promise-reject-errors": [
+      "error"
+    ],
+    "generator-star-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "no-irregular-whitespace": [
+      "error",
+      {
+        "skipTemplates": true
+      }
+    ],
+    "no-restricted-globals": [
+      "error",
+      "addEventListener",
+      "blur",
+      "close",
+      "closed",
+      "confirm",
+      "defaultStatus",
+      "event",
+      "external",
+      "defaultstatus",
+      "find",
+      "focus",
+      "frameElement",
+      "frames",
+      "history",
+      "innerHeight",
+      "innerWidth",
+      "length",
+      "location",
+      "locationbar",
+      "menubar",
+      "moveBy",
+      "moveTo",
+      "name",
+      "onblur",
+      "onerror",
+      "onfocus",
+      "onload",
+      "onresize",
+      "onunload",
+      "open",
+      "opener",
+      "opera",
+      "outerHeight",
+      "outerWidth",
+      "pageXOffset",
+      "pageYOffset",
+      "parent",
+      "print",
+      "removeEventListener",
+      "resizeBy",
+      "resizeTo",
+      "screen",
+      "screenLeft",
+      "screenTop",
+      "screenX",
+      "screenY",
+      "scroll",
+      "scrollbars",
+      "scrollBy",
+      "scrollTo",
+      "scrollX",
+      "scrollY",
+      "self",
+      "status",
+      "statusbar",
+      "stop",
+      "toolbar",
+      "top"
+    ],
+    "react/prop-types": ["off"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
