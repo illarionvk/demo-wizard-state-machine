@@ -1,0 +1,8 @@
+#! /bin/bash
+
+set -euxo pipefail
+
+rm -rf ./node_modules \
+  && docker-compose build tasks \
+  && docker-compose up -d tasks \
+  && ./attach

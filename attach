@@ -1,0 +1,5 @@
+#! /bin/bash
+
+set -euxo pipefail
+
+docker-compose exec tasks ./docker-entrypoint.sh /bin/bash

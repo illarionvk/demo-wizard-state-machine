@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  tasks:
+    build: './'
+    volumes:
+      - './:/app'
+      - 'tmp:/mnt/tmp'
+    ports:
+      - '3000:3000'
+    env_file: './.env'
+    entrypoint: ["/tini", "-sg", "--", "./docker-entrypoint.sh"]
+    command: ["/bin/bash"]
+    stdin_open: true
+    tty: true
+volumes:
+  tmp:
