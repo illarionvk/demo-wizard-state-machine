@@ -1,0 +1,12 @@
+/* ===================================================== */
+/* Utility Classes */
+/* ===================================================== */
+
+.u-hide {
+  display: none !important;
+}
+
+.u-vhide {
+  @include element-invisible;
+}
+

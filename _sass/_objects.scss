@@ -1,0 +1,16 @@
+/* ===================================================== */
+/* General Objects */
+/* ===================================================== */
+
+.o-row {
+  width: 100%;
+  max-width: $global-width;
+  margin: 0 auto;
+}
+
+.o-container {
+  width: 100%;
+  max-width: $global-width;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}

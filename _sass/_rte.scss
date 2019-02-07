@@ -1,0 +1,155 @@
+/* ===================================================== */
+/* User Content (RTE) */
+/* ===================================================== */
+
+@mixin rte-heading($size: 1em, $font-size-increases: true) {
+  position: relative;
+  margin: 0.5em 0 0.25em 0;
+  padding: 0;
+  font-size: $size;
+
+  @if $font-size-increases {
+    @include breakpoint(medium) {
+      font-size: ($size * 1.25);
+    }
+  }
+}
+
+.o-flexVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.o-rte {
+  @include clearfix();
+  overflow: hidden;
+
+  h1 {
+    @include rte-heading(1.25em);
+  }
+
+  h2 {
+    @include rte-heading(1.25em);
+  }
+
+  h3 {
+    @include rte-heading(1em);
+  }
+
+  h4 {
+    @include rte-heading($size: 1em, $font-size-increases: false);
+  }
+
+  h5, h6 {
+    @include rte-heading($size: 1em, $font-size-increases: false);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 2em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p + p {
+    margin-top: -0.25em;
+  }
+
+  ul, ol, dl {
+    font-size: 1em;
+  }
+
+  ul {
+    list-style: disc outside none;
+    padding-left: 1.8em;
+    margin: 0 0 1em 0;
+
+    ul {
+      list-style: circle outside none;
+    }
+
+    li {
+      list-style: inherit;
+
+      p + p {
+        margin-top: -1em;
+      }
+    }
+  }
+
+  ol {
+    list-style: decimal outside none;
+    padding-left: 1.8em;
+    margin: 0 0 1em 0;
+
+    ol {
+      list-style: decimal outside none;
+    }
+
+    li {
+      list-style: inherit;
+
+      p + p {
+        margin-top: -1em;
+      }
+    }
+  }
+
+  blockquote {
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.4;
+    }
+  }
+
+  a:not(.o-button) {
+    border-bottom: 0.0625rem solid $text-link;
+
+    &:hover, &:focus {
+      border-bottom-color: $text-link-hover;
+    }
+  }
+
+  iframe, object {
+    max-width: 100%;
+  }
+
+  figure {
+    text-align: center;
+    margin: 1em 2.5em;
+  }
+
+  figcaption {
+    margin: 1em 0;
+    font-size: modular-scale(-1, 1em);
+    font-style: italic;
+  }
+
+  .figure {
+    text-align: center;
+    margin: 1em 2.5em;
+
+    & > .caption {
+      margin: 1em 0;
+      font-size: modular-scale(-1, 1em);
+      font-style: italic;
+    }
+  }
+}
+

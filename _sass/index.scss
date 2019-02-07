@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+// Settings
+
+@import './colors';
+
+// Vendor Components
+// ===============================================
+
+@import "bourbon";
+$modular-scale-ratio: $major-third;
+$modular-scale-base: 1rem;
+
+@import './foundation-settings';
+
+// Force media queries sort order for MQPacker plugin
+@media print {/* MQPacker */}
+@include breakpoint(landscape) {/* MQPacker */}
+@include breakpoint(medium) {/* MQPacker */}
+@include breakpoint(large) {/* MQPacker */}
+@include breakpoint(xlarge) {/* MQPacker */}
+@include breakpoint(xxlarge) {/* MQPacker */}
+@media screen and (min-width: 0\0) {/* MQPacker */}
+
+// Zurb Foundation for Sites
+@import '_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '_vendor/sassy-lists/stylesheets/helpers/true';
+@import '_vendor/sassy-lists/stylesheets/functions/contain';
+@import '_vendor/sassy-lists/stylesheets/functions/purge';
+@import '_vendor/sassy-lists/stylesheets/functions/remove';
+@import '_vendor/sassy-lists/stylesheets/functions/replace';
+@import '_vendor/sassy-lists/stylesheets/functions/to-list';
+
+@import 'scss/vendor/normalize';
+@import 'scss/util/util';
+@import 'scss/global';
+@import 'scss/forms/forms';
+@import 'scss/typography/typography';
+
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-forms;
+
+// Styles
+// ===============================================
+
+@import 'utilities';
+@import 'objects';
+@import 'rte';
