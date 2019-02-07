@@ -5,6 +5,7 @@
   "dependencies": {
     "andlog": "1.0.1",
     "autoprefixer": "9.4.7",
+    "axios": "0.18.0",
     "bourbon": "5.1.0",
     "css-mqpacker": "7.0.0",
     "esm": "3.2.3",

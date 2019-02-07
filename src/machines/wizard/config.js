@@ -4,7 +4,7 @@ import { makeState, stateNames } from './states'
 const { FAILURE, IDLE, INITIALIZING, END } = stateNames
 
 const makeConfig = function makeConfig(world, initialState) {
-  const { fetchData } = world
+  const { loadBicycles } = world
 
   const reload = function reload() {
     global.location.reload(true)
@@ -23,7 +23,7 @@ const makeConfig = function makeConfig(world, initialState) {
       [INITIALIZING]: {
         bootstrap: function* bootstrap() {
           try {
-            yield call(fetchData)
+            yield call(loadBicycles)
             return yield makeState(END)
           } catch (error) {
             yield makeState(FAILURE, error)
