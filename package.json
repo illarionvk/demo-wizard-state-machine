@@ -30,6 +30,7 @@
   "scripts": {
     "start": "honcho start",
     "build": "gulp build && react-scripts build",
+    "lint": "eslint ./ --color",
     "test": "(rg --files --type js --iglob '*/test-*' | parallel -j 1 --will-cite 'tape -r esm -r tape-catch {}') | tap-spec",
     "test:one": "tape -r esm -r tape-catch",
     "eject": "react-scripts eject"

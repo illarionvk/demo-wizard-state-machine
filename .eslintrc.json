@@ -40,13 +40,6 @@
     "prefer-promise-reject-errors": [
       "error"
     ],
-    "generator-star-spacing": [
-      "error",
-      {
-        "before": true,
-        "after": true
-      }
-    ],
     "no-irregular-whitespace": [
       "error",
       {

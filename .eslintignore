@@ -2,3 +2,4 @@ assets/*.js
 _libs/*.js
 tmp/*.js
 flow-typed
+src/serviceWorker.js
