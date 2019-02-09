@@ -1,10 +1,21 @@
 import { call } from 'stent/lib/helpers'
 import { makeState, stateNames } from './states'
 
-const { FAILURE, IDLE, INITIALIZING, END } = stateNames
+const {
+  BICYCLE,
+  DRIVETRAIN,
+  FAILURE,
+  IDLE,
+  INITIALIZING,
+  NOTE,
+  PAINT,
+  PEDAL,
+  SADDLE,
+  SUMMARY
+} = stateNames
 
 const makeConfig = function makeConfig(world, initialState) {
-  const { loadBicycles } = world
+  const { loadBicycles, loadBicycleAssets } = world
 
   const reload = function reload() {
     global.location.reload(true)
@@ -21,17 +32,48 @@ const makeConfig = function makeConfig(world, initialState) {
         }
       },
       [INITIALIZING]: {
-        bootstrap: function* bootstrap() {
+        bootstrap: function* bootstrap(machine) {
           try {
             yield call(loadBicycles)
-            return yield makeState(END)
+            machine.fastForward()
           } catch (error) {
             yield makeState(FAILURE, error)
           }
+        },
+        fastForward: function* initialFastForward() {
+          return yield makeState(BICYCLE)
         }
       },
-      [END]: {
-        reload
+      [BICYCLE]: {
+        advance: function* advance(machine) {
+          try {
+            yield call(loadBicycleAssets)
+            machine.fastForward()
+          } catch (error) {
+            yield makeState(FAILURE, error)
+          }
+        },
+        fastForward: function* fastForward() {
+          return yield makeState(DRIVETRAIN)
+        }
+      },
+      [DRIVETRAIN]: {
+        advance: makeState(PAINT)
+      },
+      [PAINT]: {
+        advance: makeState(PEDAL)
+      },
+      [PEDAL]: {
+        advance: makeState(SADDLE)
+      },
+      [SADDLE]: {
+        advance: makeState(NOTE)
+      },
+      [NOTE]: {
+        advance: makeState(SUMMARY)
+      },
+      [SUMMARY]: {
+        reload: makeState(IDLE)
       },
       [FAILURE]: {
         reload
