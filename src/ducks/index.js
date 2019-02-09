@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension/logOnly'
 import { loggerMiddleware } from './logger'
 
 import { bicycle } from './bicycle'
+import { drivetrain } from './drivetrain'
 import { paint } from './paint'
 import { pedal } from './pedal'
 import { saddle } from './saddle'
@@ -15,6 +16,7 @@ const STORE = 'store_9d7eb9682ad411e9917210ddb1eacae1'
 const initialState = {
   assets: {
     bicycle: bicycle.initialState,
+    drivetrain: drivetrain.initialState,
     paint: paint.initialState,
     pedal: pedal.initialState,
     saddle: saddle.initialState
@@ -25,6 +27,7 @@ const initialState = {
 const rootReducer = combineReducers({
   assets: combineReducers({
     bicycle: bicycle.reducer,
+    drivetrain: drivetrain.reducer,
     paint: paint.reducer,
     pedal: pedal.reducer,
     saddle: saddle.reducer
