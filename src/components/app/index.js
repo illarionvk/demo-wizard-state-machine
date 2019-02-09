@@ -1,25 +1,30 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
+
+import { WizardRouter } from '../wizard-router'
+
+const Test = function(props) {
+  const { message } = props
+
+  return (
+    <main className="app-Main" role="main">
+      {message}
+    </main>
+  )
+}
 
 export class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <>
+        <header className="app-Header" />
+        <WizardRouter>
+          <Test path="/" message="Hello!" />
+          <Test path="/initializing" message="Initializing" />
+          <Test path="/steps/bicycle" message="Bicycle" />
+        </WizardRouter>
+        <aside className="app-Notes">Aside</aside>
+        <footer className="app-Footer" />
+      </>
     )
   }
 }
