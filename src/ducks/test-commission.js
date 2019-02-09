@@ -24,6 +24,7 @@ test('Commission Ducks', function(t) {
     ;(function() {
       const paths = [
         ['selected', 'bicycle'],
+        ['selected', 'paint'],
         ['selected', 'pedal'],
         ['selected', 'saddle'],
         ['note']
@@ -37,7 +38,7 @@ test('Commission Ducks', function(t) {
 
         const actual = update(payload)
 
-        st.notOk(actual.error, 'accepts valid path')
+        st.notOk(actual.error, `accepts valid path -- ${JSON.stringify(path)}`)
         st.deepEqual(actual.payload, payload, 'outputs the same payload')
       }, paths)
     })()
