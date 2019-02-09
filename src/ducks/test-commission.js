@@ -1,4 +1,5 @@
 import test from 'tape'
+import { forEach } from 'lodash/fp'
 
 import { update } from './commission'
 
@@ -21,15 +22,24 @@ test('Commission Ducks', function(t) {
 
     // Valid path
     ;(function() {
-      const payload = {
-        path: ['bicycle'],
-        value: 'A'
-      }
+      const paths = [
+        ['selected', 'bicycle'],
+        ['selected', 'pedal'],
+        ['selected', 'saddle'],
+        ['note']
+      ]
 
-      const actual = update(payload)
+      forEach(function(path) {
+        const payload = {
+          path,
+          value: 'A'
+        }
 
-      st.notOk(actual.error, 'accepts valid path')
-      st.deepEqual(actual.payload, payload, 'outputs the same payload')
+        const actual = update(payload)
+
+        st.notOk(actual.error, 'accepts valid path')
+        st.deepEqual(actual.payload, payload, 'outputs the same payload')
+      }, paths)
     })()
 
     st.end()

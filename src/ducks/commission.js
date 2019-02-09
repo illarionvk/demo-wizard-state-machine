@@ -10,7 +10,8 @@ const { default: produce } = require('immer')
 const initialState = {
   selected: {
     bicycle: null,
-    pedal: null
+    pedal: null,
+    saddle: null
   },
   note: ''
 }
