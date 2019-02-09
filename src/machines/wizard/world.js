@@ -9,6 +9,8 @@ import { paint } from '../../ducks/paint'
 import { pedal } from '../../ducks/pedal'
 import { saddle } from '../../ducks/saddle'
 
+import { getSelectedId } from '../../selectors/commission'
+
 const { PUBLIC_URL = '' } = process.env
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
@@ -20,11 +22,13 @@ export const world = {
     })
 
     // Intentional delay
-    await sleep(2000)
+    await sleep(100)
 
     store.dispatch(bicycle.add(data))
   },
-  loadBicycleAssets: async function loadBicycleAssets(id) {
+  loadBicycleAssets: async function loadBicycleAssets() {
+    const id = getSelectedId(store.getState(), { assetName: 'bicycle' })
+
     if (!id) {
       throw new Error('Bicycle ID is invalid')
     }

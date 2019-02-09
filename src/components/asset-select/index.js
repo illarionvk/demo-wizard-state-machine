@@ -5,6 +5,8 @@ import { Form, FormSpy } from 'react-final-form'
 import { map } from 'lodash/fp'
 
 import { update as updateCommission } from '../../ducks/commission'
+import { getSelectedId } from '../../selectors/commission'
+
 import { AssetRadioButton } from './radio-button'
 
 const getAllItems = (state, props) => {
@@ -14,9 +16,6 @@ const getAllItems = (state, props) => {
     return byId[id]
   }, allIds)
 }
-
-const getSelectedId = (state, props) =>
-  state.commission.selected[props.assetName] || null
 
 const AssetSelect = function AssetSelect(props) {
   const { assetName, items, selectedId, onSubmit } = props
