@@ -1,0 +1,36 @@
+{
+  "bicycle": {
+    "id": "83a64446-b385-4d8f-ade9-9d482fa3ac8f",
+    "title": "Unicycle",
+    "price": 999
+  },
+  "paint": [
+    {
+      "id": "39207056-5826-4eb6-a1f7-a2fac8bd84a7",
+      "title": "Firetruck Red",
+      "hex": "#ec1c24",
+      "price": 0
+    }
+  ],
+  "drivetrain": [
+    {
+      "id": "5e8c0dee-7278-423d-8f60-f1057425cdb9",
+      "title": "Fixed Gear",
+      "price": 0
+    }
+  ],
+  "pedal": [
+    {
+      "id": "b0c7c42d-eb23-4fb8-a279-3dd034d8ab30",
+      "title": "Platform",
+      "price": 0
+    }
+  ],
+  "saddle": [
+    {
+      "id": "a66917ad-b49c-40fa-bc96-a0d339ab2954",
+      "title": "Watson Freeride Stadium",
+      "price": 0
+    }
+  ]
+}

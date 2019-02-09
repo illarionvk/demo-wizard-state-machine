@@ -1,16 +1,10 @@
 {
-  "self": {
+  "bicycle": {
     "id": "aabe3c12-99b0-4923-a08c-dde5b1b41129",
     "title": "Road",
     "price": 599
   },
   "paint": [
-    {
-      "id": "900e5930-fd12-4c8a-82b6-1d0d94f80992",
-      "title": "Bonjour White",
-      "hex": "#e2e2e2",
-      "price": 0
-    },
     {
       "id": "b146149f-6ac9-43aa-8140-a8e547aa1677",
       "title": "Oxford Blue",

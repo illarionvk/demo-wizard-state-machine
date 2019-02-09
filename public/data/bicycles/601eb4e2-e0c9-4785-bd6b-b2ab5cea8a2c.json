@@ -1,0 +1,68 @@
+{
+  "bicycle": {
+    "id": "601eb4e2-e0c9-4785-bd6b-b2ab5cea8a2c",
+    "title": "Trekking",
+    "price": 499
+  },
+  "paint": [
+    {
+      "id": "ab13b1fb-682d-4a36-9819-22203e757ffc",
+      "title": "Black",
+      "hex": "#303030",
+      "price": 0
+    },
+    {
+      "id": "a7401c00-d7ef-471b-9fe5-6984ff0f7b78",
+      "title": "Silver",
+      "hex": "#bdbdbd",
+      "price": 0
+    },
+    {
+      "id": "ab653ee6-fcfd-4979-983e-9d1342509454",
+      "title": "Kaitoke Green",
+      "hex": "#265439",
+      "price": 50
+    }
+  ],
+  "drivetrain": [
+    {
+      "id": "d1d9528f-bf0a-44cd-b0a2-c747d60514f0",
+      "title": "Impeto Brizo 7",
+      "price": 0
+    },
+    {
+      "id": "3743f4eb-61c6-45a9-a66d-9e87c21cddec",
+      "title": "Impeto Brizo 8",
+      "price": 30
+    },
+    {
+      "id": "8ab245dc-235e-48ec-8f13-07e2053fb5bf",
+      "title": "Impeto Pelado 11",
+      "price": 100
+    }
+  ],
+  "pedal": [
+    {
+      "id": "28aafadd-882b-40a4-a5ca-ac5dea31aa94",
+      "title": "Platform",
+      "price": 0
+    },
+    {
+      "id": "189b333d-e870-4c44-8fb5-82fe3935033f",
+      "title": "Mountain Clipless",
+      "price": 0
+    },
+    {
+      "id": "0a084dd6-4a29-4037-85e8-15ef1113e1b3",
+      "title": "Hybrid Clipless",
+      "price": 20
+    }
+  ],
+  "saddle": [
+    {
+      "id": "3c207850-033f-494f-bf1e-6cbb73275829",
+      "title": "Orion Pro",
+      "price": 0
+    }
+  ]
+}

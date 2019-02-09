@@ -3,5 +3,15 @@
     "id": "aabe3c12-99b0-4923-a08c-dde5b1b41129",
     "title": "Road",
     "price": 599
+  },
+  {
+    "id": "601eb4e2-e0c9-4785-bd6b-b2ab5cea8a2c",
+    "title": "Trekking",
+    "price": 499
+  },
+  {
+    "id": "83a64446-b385-4d8f-ade9-9d482fa3ac8f",
+    "title": "Unicycle",
+    "price": 999
   }
 ]
