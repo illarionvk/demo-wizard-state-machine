@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@reach/router": "1.2.1",
     "andlog": "1.0.1",
     "autoprefixer": "9.4.7",
     "axios": "0.18.0",
