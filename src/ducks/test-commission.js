@@ -1,7 +1,7 @@
 import test from 'tape'
 import { forEach } from 'lodash/fp'
 
-import { update } from './commission'
+import { initialState, reducer, reset, update } from './commission'
 
 test('Commission Ducks', function(t) {
   t.test('Update action creator', function(st) {
@@ -41,6 +41,42 @@ test('Commission Ducks', function(t) {
         st.deepEqual(actual.payload, payload, 'outputs the same payload')
       }, paths)
     })()
+
+    st.end()
+  })
+
+  t.test('Reducer', function(st) {
+    st.deepEqual(
+      reducer(),
+      initialState,
+      'should return initial state if no arguments are passed'
+    )
+
+    st.end()
+  })
+
+  t.test('Reducer', function(st) {
+    const currentState = {
+      ...initialState,
+      note: 'Hello'
+    }
+
+    st.deepEqual(
+      reducer(currentState, reset()),
+      initialState,
+      'should return initial state on RESET action'
+    )
+
+    st.end()
+  })
+
+  t.test('Reducer', function(st) {
+    const state = reducer(
+      initialState,
+      update({ path: ['selected', 'bicycle'], value: 'A' })
+    )
+
+    st.ok(state.selected.bicycle === 'A', 'should handle UPDATE action')
 
     st.end()
   })

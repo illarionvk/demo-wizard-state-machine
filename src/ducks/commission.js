@@ -44,7 +44,7 @@ const reducer = function(state = initialState, action) {
       const payload = action.payload || {}
 
       // Immer recommends reading from current state to improve performance
-      draft.selection = L.set(payload.path, payload.value, state.selection)
+      draft = L.set(payload.path, payload.value, state)
 
       return draft
     })
