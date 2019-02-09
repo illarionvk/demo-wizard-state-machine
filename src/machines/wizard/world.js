@@ -11,11 +11,16 @@ import { saddle } from '../../ducks/saddle'
 
 const { PUBLIC_URL = '' } = process.env
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+
 export const world = {
   loadBicycles: async function loadBicycles() {
     const { data } = await axios({
       url: PUBLIC_URL + '/data/bicycles.json'
     })
+
+    // Intentional delay
+    await sleep(2000)
 
     store.dispatch(bicycle.add(data))
   },
