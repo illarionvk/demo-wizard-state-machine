@@ -15,6 +15,8 @@
     "gulp-postcss": "8.0.0",
     "gulp-sass": "4.0.2",
     "immer": "2.0.0",
+    "joi": "14.3.1",
+    "load-json-file": "5.1.0",
     "lodash": "4.17.11",
     "partial.lenses": "14.17.0",
     "react": "16.8.1",
