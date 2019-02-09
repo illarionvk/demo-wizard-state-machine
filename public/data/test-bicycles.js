@@ -1,7 +1,7 @@
 import path from 'path'
 import test from 'tape'
 import loadJsonFile from 'load-json-file'
-import { forEach, map } from 'lodash/fp'
+import { forEach, map, some } from 'lodash/fp'
 
 import { itemSchema, listingSchema } from './bicycles-schema'
 
@@ -21,7 +21,7 @@ test('Data', function(t) {
     st.end()
   })
 
-  t.test('Items', function(st) {
+  t.test('Assets', function(st) {
     Promise.all(
       map(function(listingItem) {
         const { id } = listingItem
@@ -32,7 +32,12 @@ test('Data', function(t) {
       .then(
         forEach(function(item) {
           const { error } = itemSchema.validate(item, options)
+          const idMatchesListing = some(function(listingItem) {
+            return listingItem.id === item.bicycle.id
+          }, bicycleListing)
+
           st.error(error, 'have valid shape')
+          st.ok(idMatchesListing, 'bicycle ID matches listing id')
         })
       )
       .catch(function(err) {
