@@ -2,10 +2,9 @@
  * Ducks: User Data
  */
 
-const { isUndefined, has, truncate } = require('lodash/fp')
-
-const L = require('partial.lenses')
-const { default: produce } = require('immer')
+import { isUndefined, has, truncate } from 'lodash/fp'
+import { set as lSet } from 'partial.lenses'
+import { produce } from 'immer'
 
 const initialState = {
   selected: {
@@ -17,8 +16,8 @@ const initialState = {
   note: ''
 }
 
-const RESET = 'app/userdata/RESET'
-const UPDATE = 'app/userdata/UPDATE'
+const RESET = 'app/commission/RESET'
+const UPDATE = 'app/commission/UPDATE'
 
 const MAX_NOTE_LENGTH = 1024
 
@@ -45,7 +44,7 @@ const reducer = function(state = initialState, action) {
       const payload = action.payload || {}
 
       // Immer recommends reading from current state to improve performance
-      draft = L.set(payload.path, payload.value, state)
+      draft = lSet(payload.path, payload.value, state)
 
       return draft
     })
@@ -103,7 +102,7 @@ const updateNote = function updateNote(rawNote) {
   return update(payload, meta)
 }
 
-module.exports = {
+export {
   MAX_NOTE_LENGTH,
   RESET,
   UPDATE,

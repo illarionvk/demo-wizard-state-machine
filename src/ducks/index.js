@@ -12,7 +12,10 @@ import { paint } from './paint'
 import { pedal } from './pedal'
 import { saddle } from './saddle'
 
-import commission from './commission'
+import {
+  initialState as commissionInitialState,
+  reducer as commissionReducer
+} from './commission'
 
 const STORE = 'store_9d7eb9682ad411e9917210ddb1eacae1'
 
@@ -24,7 +27,7 @@ const initialState = {
     pedal: pedal.initialState,
     saddle: saddle.initialState
   },
-  commission: commission.initialState
+  commission: commissionInitialState
 }
 
 const rootReducer = combineReducers({
@@ -35,7 +38,7 @@ const rootReducer = combineReducers({
     pedal: pedal.reducer,
     saddle: saddle.reducer
   }),
-  commission: commission.reducer
+  commission: commissionReducer
 })
 
 const rootEpic = combineEpics(updateUrlQuery)
