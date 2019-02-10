@@ -60,21 +60,27 @@ const makeConfig = function makeConfig(world, initialState) {
         }
       },
       [DRIVETRAIN]: {
+        retreat: makeState(BICYCLE),
         advance: makeState(PAINT)
       },
       [PAINT]: {
+        retreat: makeState(DRIVETRAIN),
         advance: makeState(PEDAL)
       },
       [PEDAL]: {
+        retreat: makeState(PAINT),
         advance: makeState(SADDLE)
       },
       [SADDLE]: {
+        retreat: makeState(PEDAL),
         advance: makeState(NOTE)
       },
       [NOTE]: {
+        retreat: makeState(SADDLE),
         advance: makeState(SUMMARY)
       },
       [SUMMARY]: {
+        retreat: makeState(NOTE),
         reload: makeState(IDLE)
       },
       [FAILURE]: {
