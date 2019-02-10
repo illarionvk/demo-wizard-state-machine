@@ -10,6 +10,7 @@ import { pedal } from '../../ducks/pedal'
 import { saddle } from '../../ducks/saddle'
 
 import { getSelectedId } from '../../selectors/commission'
+import { inferAssetHandle } from '../../selectors/asset'
 
 import { setCommissionDefaults } from './set-commission-defaults'
 
@@ -18,6 +19,9 @@ const { PUBLIC_URL = '' } = process.env
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export const world = {
+  getSelectedBicycleHandle: function() {
+    return inferAssetHandle(store.getState(), { assetName: 'bicycle' })
+  },
   loadBicycles: async function loadBicycles() {
     const { data } = await axios({
       url: PUBLIC_URL + '/data/bicycles.json'

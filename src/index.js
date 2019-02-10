@@ -8,6 +8,7 @@ import { App } from './components/app'
 import * as serviceWorker from './serviceWorker'
 
 import { store } from './ducks'
+import { wizard } from './machines'
 
 ReactDOM.render(
   <Provider store={store}>
@@ -20,3 +21,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister()
+
+wizard.init()

@@ -16,7 +16,12 @@ const {
 } = stateNames
 
 const makeConfig = function makeConfig(world, initialState) {
-  const { loadBicycles, loadBicycleAssets, setCommissionDefaults } = world
+  const {
+    getSelectedBicycleHandle,
+    loadBicycles,
+    loadBicycleAssets,
+    setCommissionDefaults
+  } = world
 
   const reload = function reload() {
     global.location.reload(true)
@@ -37,13 +42,10 @@ const makeConfig = function makeConfig(world, initialState) {
           try {
             yield call(loadBicycles)
             yield call(setCommissionDefaults)
-            machine.fastForward()
+            return yield makeState(BICYCLE)
           } catch (error) {
             yield makeState(FAILURE, error)
           }
-        },
-        fastForward: function* initialFastForward() {
-          return yield makeState(BICYCLE)
         }
       },
       [LOADING]: { reload },
@@ -53,7 +55,11 @@ const makeConfig = function makeConfig(world, initialState) {
             yield makeState(LOADING)
             yield call(loadBicycleAssets)
             yield call(setCommissionDefaults)
-            yield makeState(DRIVETRAIN)
+            // Fast-forward to NOTE if Unicycle is selected
+            if (getSelectedBicycleHandle() === 'unicycle') {
+              return yield makeState(NOTE)
+            }
+            return yield makeState(DRIVETRAIN)
           } catch (error) {
             yield makeState(FAILURE, error)
           }

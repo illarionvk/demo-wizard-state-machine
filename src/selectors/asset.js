@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { map } from 'lodash/fp'
+import { map, snakeCase } from 'lodash/fp'
 
 import { getSelectedId } from './commission'
 
@@ -35,6 +35,13 @@ export const inferAsset = createSelector(
   [getAssetState, getSelectedId],
   function(assetState, id) {
     return assetState.byId[id]
+  }
+)
+
+export const inferAssetHandle = createSelector(
+  [inferAsset],
+  function(asset) {
+    return asset ? snakeCase(asset.title) : null
   }
 )
 
