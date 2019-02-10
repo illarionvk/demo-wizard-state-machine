@@ -19,7 +19,7 @@ const wired = wire(AdvanceButton)
   .map(function(m1) {
     return {
       // stateName: m1.state.name,
-      advance: m1.advance,
+      advance: () => m1.advance(),
       isAdvanceAllowed: m1.isAdvanceAllowed()
     }
   })

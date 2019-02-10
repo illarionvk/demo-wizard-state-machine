@@ -18,7 +18,7 @@ const wired = wire(RetreatButton)
   .with(wizard.name)
   .map(function(m1) {
     return {
-      retreat: m1.retreat,
+      retreat: () => m1.retreat(),
       isRetreatAllowed: m1.isRetreatAllowed()
     }
   })
