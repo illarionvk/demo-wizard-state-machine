@@ -12,12 +12,12 @@ const makeState = function(name, error = null) {
 const FAILURE = '/failure'
 const IDLE = '/idle'
 const INITIALIZING = '/initializing'
-const BICYCLE = '/steps/bicycle'
-const DRIVETRAIN = '/steps/drivetrain'
-const PAINT = '/steps/paint'
-const PEDAL = '/steps/pedal'
-const SADDLE = '/steps/saddle'
-const NOTE = '/steps/note'
+const BICYCLE = '/select/bicycle'
+const DRIVETRAIN = '/select/drivetrain'
+const PAINT = '/select/paint'
+const PEDAL = '/select/pedal'
+const SADDLE = '/select/saddle'
+const NOTE = '/note'
 const SUMMARY = '/summary'
 
 const stateNames = {

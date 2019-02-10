@@ -3,11 +3,7 @@ import React, { Component } from 'react'
 import { WizardRouter } from '../wizard-router'
 import { PathIndicator } from '../path-indicator'
 import { Navigation } from '../navigation'
-import { Bicycle } from '../bicycle'
-
-import { stateNames } from '../../machines/wizard/states'
-
-const { BICYCLE } = stateNames
+import { AssetSelect } from '../asset-select'
 
 export class App extends Component {
   render() {
@@ -17,7 +13,7 @@ export class App extends Component {
           <Navigation />
         </header>
         <WizardRouter>
-          <Bicycle path={BICYCLE} />
+          <AssetSelect path="/select/:assetName" />
         </WizardRouter>
         <aside className="app-Notes">
           <PathIndicator />
