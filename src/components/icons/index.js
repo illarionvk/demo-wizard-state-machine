@@ -7,6 +7,7 @@ import { ReactComponent as Drivetrain } from './svg/drivetrain.svg'
 import { ReactComponent as Paint } from './svg/paint.svg'
 import { ReactComponent as Pedal } from './svg/pedal.svg'
 import { ReactComponent as Saddle } from './svg/saddle.svg'
+import { ReactComponent as Edit } from './svg/edit.svg'
 
 const icons = {
   bicycle_road: RoadBicycle,
@@ -15,7 +16,8 @@ const icons = {
   drivetrain: Drivetrain,
   paint: Paint,
   pedal: Pedal,
-  saddle: Saddle
+  saddle: Saddle,
+  edit: Edit
 }
 
 export const Icons = function Icons(props) {

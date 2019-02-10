@@ -23,6 +23,7 @@ export class App extends React.Component {
           <WizardRouter>
             <Summary path="/select/*" />
             <Summary path="/note" />
+            <Summary path="/summary" />
           </WizardRouter>
         </main>
         <footer className="app-Footer">
