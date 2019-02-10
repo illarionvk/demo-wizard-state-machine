@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Selected } from './selected'
+import { TotalPrice } from './total-price'
 
 export const Summary = function Summary() {
   return (
@@ -11,6 +12,7 @@ export const Summary = function Summary() {
       <Selected assetName="paint" />
       <Selected assetName="pedal" />
       <Selected assetName="saddle" />
+      <TotalPrice />
     </div>
   )
 }

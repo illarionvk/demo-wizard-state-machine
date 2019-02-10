@@ -13,8 +13,8 @@ const Selected = function Selected(props) {
 
   return (
     <div>
-      <p>{item.title}</p>
-      {item.price ? <p>${item.price}</p> : null}
+      {item.title}
+      {item.price ? <span> ${item.price}</span> : null}
     </div>
   )
 }

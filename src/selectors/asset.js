@@ -37,3 +37,10 @@ export const inferAsset = createSelector(
     return assetState.byId[id]
   }
 )
+
+export const inferAssetPrice = createSelector(
+  [inferAsset],
+  function(asset) {
+    return asset ? asset.price || 0 : 0
+  }
+)
