@@ -29,6 +29,21 @@ export class App extends React.Component {
         <footer className="app-Footer">
           <div className="app-Footer-container">
             <PathIndicator />
+            <p>
+              Icons designed by{' '}
+              <a href="https://www.flaticon.com/authors/freepik">
+                Freepik from Flaticon
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://github.com/illarionvk/demo-wizard-state-machine"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source code on GitHub
+              </a>
+            </p>
           </div>
         </footer>
       </div>
