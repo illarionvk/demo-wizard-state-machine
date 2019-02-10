@@ -24,6 +24,7 @@ body {
   flex: 1 1 100%;
   width: 100%;
   max-width: rem-calc(420);
+  overflow: auto;
   margin: 0 auto;
   padding: 0 rem-calc(20);
   background-color: $white;

@@ -354,7 +354,7 @@ body { background-color: #d7d7e4; }
 
 .app-Header { background-color: #f7f7f7; }
 
-.app-Main { flex: 1 1 100%; width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }
+.app-Main { flex: 1 1 100%; width: 100%; max-width: 26.25rem; overflow: auto; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }
 
 .app-Footer { width: 100%; background-color: #f7f7f7; }
 
