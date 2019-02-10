@@ -1,6 +1,8 @@
 import { createSelector } from 'reselect'
 import { map } from 'lodash/fp'
 
+import { getSelectedId } from './commission'
+
 export const getAssetState = function(state, props) {
   const { assetName } = props
 
@@ -26,5 +28,12 @@ export const getAssetItems = createSelector(
     return map(function(id) {
       return byId[id]
     }, allIds)
+  }
+)
+
+export const inferAsset = createSelector(
+  [getAssetState, getSelectedId],
+  function(assetState, id) {
+    return assetState.byId[id]
   }
 )
