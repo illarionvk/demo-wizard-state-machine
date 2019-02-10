@@ -12,6 +12,7 @@ const makeState = function(name, error = null) {
 const FAILURE = '/failure'
 const IDLE = '/idle'
 const INITIALIZING = '/initializing'
+const LOADING = '/loading'
 const BICYCLE = '/select/bicycle'
 const DRIVETRAIN = '/select/drivetrain'
 const PAINT = '/select/paint'
@@ -24,6 +25,7 @@ const stateNames = {
   FAILURE,
   IDLE,
   INITIALIZING,
+  LOADING,
   BICYCLE,
   DRIVETRAIN,
   PAINT,
@@ -38,6 +40,7 @@ const progressPercentage = {
   [FAILURE]: -1,
   [IDLE]: 0,
   [INITIALIZING]: 0,
+  [LOADING]: -1,
   [BICYCLE]: 15,
   [DRIVETRAIN]: 30,
   [PAINT]: 45,

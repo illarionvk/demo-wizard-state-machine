@@ -7,6 +7,7 @@ const {
   FAILURE,
   IDLE,
   INITIALIZING,
+  LOADING,
   NOTE,
   PAINT,
   PEDAL,
@@ -45,18 +46,17 @@ const makeConfig = function makeConfig(world, initialState) {
           return yield makeState(BICYCLE)
         }
       },
+      [LOADING]: { reload },
       [BICYCLE]: {
         advance: function* advance(machine) {
           try {
+            yield makeState(LOADING)
             yield call(loadBicycleAssets)
             yield call(setCommissionDefaults)
-            machine.fastForward()
+            yield makeState(DRIVETRAIN)
           } catch (error) {
             yield makeState(FAILURE, error)
           }
-        },
-        fastForward: function* componentsFastForward() {
-          return yield makeState(DRIVETRAIN)
         }
       },
       [DRIVETRAIN]: {
