@@ -17,3 +17,5 @@ export const getSelectedId = createSelector(
     return selected[assetName] || null
   }
 )
+
+export const getNote = (state) => state.commission.note
