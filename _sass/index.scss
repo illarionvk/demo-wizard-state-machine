@@ -48,15 +48,5 @@ $modular-scale-base: 1rem;
 @import 'objects';
 @import 'rte';
 
+@import 'layout';
 @import 'summary';
-
-body {
-  background-color: #eee;
-}
-
-.app-Main {
-  max-width: rem-calc(420);
-  margin: 0 auto;
-  padding: 0 rem-calc(20);
-  background-color: $white;
-}

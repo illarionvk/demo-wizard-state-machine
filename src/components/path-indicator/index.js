@@ -6,7 +6,12 @@ const PathIndicator = function(props) {
     location: { pathname = '404 Not Found' }
   } = props
 
-  return <aside className="app-PathIndicator">{pathname}</aside>
+  return (
+    <aside className="app-PathIndicator">
+      <span>Wizard path: </span>
+      <span>{pathname}</span>
+    </aside>
+  )
 }
 
 const routed = function() {

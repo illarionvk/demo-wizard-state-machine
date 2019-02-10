@@ -346,6 +346,21 @@ select[multiple] { height: auto; background-image: none; }
 .o-rte .figure > .caption { margin: 1em 0; font-size: 0.8em; font-style: italic; }
 
 /* ===================================================== */
+/* Layout */
+/* ===================================================== */
+body { background-color: #d7d7e4; }
+
+.app-Layout { display: flex; flex-flow: column nowrap; justify-content: stretch; align-items: stretch; height: 100vh; }
+
+.app-Header { background-color: #f7f7f7; }
+
+.app-Main { flex: 1 1 100%; width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }
+
+.app-Footer { width: 100%; background-color: #f7f7f7; }
+
+.app-Footer-container { width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ===================================================== */
 /* Summary */
 /* ===================================================== */
 .app-Summary-item { display: flex; flex-flow: row nowrap; justify-content: stretch; align-items: flex-start; position: relative; margin: 0.625rem 0; padding: 0.625rem; }
@@ -359,10 +374,6 @@ select[multiple] { height: auto; background-image: none; }
 .app-Summary-itemTitle { font-size: 0.875rem; font-weight: 700; }
 
 .app-Summary-itemSubtitle { margin: 0.5em 0 0 0; font-size: 0.625rem; }
-
-body { background-color: #eee; }
-
-.app-Main { max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }
 
 @media print { /* MQPacker */
   * { background: transparent !important; box-shadow: none !important; color: black !important; text-shadow: none !important; }

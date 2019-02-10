@@ -10,7 +10,9 @@ export class App extends React.Component {
   render() {
     return (
       <div className="app-Layout">
-        <header className="app-Header" />
+        <header className="app-Header">
+          <h1>Wizard State Machine Demo</h1>
+        </header>
         <main className="app-Main">
           <Navigation />
           <WizardRouter>
@@ -21,10 +23,11 @@ export class App extends React.Component {
             <Summary path="/note" />
           </WizardRouter>
         </main>
-        <aside className="app-Notes">
-          <PathIndicator />
-        </aside>
-        <footer className="app-Footer" />
+        <footer className="app-Footer">
+          <div className="app-Footer-container">
+            <PathIndicator />
+          </div>
+        </footer>
       </div>
     )
   }
