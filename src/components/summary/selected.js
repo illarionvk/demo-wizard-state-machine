@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
+import { startCase } from 'lodash/fp'
 
 import { inferAsset } from '../../selectors/asset'
 
 const Selected = function Selected(props) {
-  const { item } = props
+  const { assetName, item } = props
 
   if (item == null) {
     return null
@@ -13,7 +14,8 @@ const Selected = function Selected(props) {
 
   return (
     <div>
-      {item.title}
+      <span>{startCase(assetName)}: </span>
+      <span> {item.title}</span>
       {item.price ? <span> ${item.price}</span> : null}
     </div>
   )

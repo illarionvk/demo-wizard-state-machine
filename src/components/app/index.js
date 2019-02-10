@@ -16,7 +16,10 @@ export class App extends React.Component {
           <WizardRouter>
             <AssetSelect path="/select/:assetName" />
           </WizardRouter>
-          <Summary />
+          <WizardRouter>
+            <Summary path="/select/*" />
+            <Summary path="/note" />
+          </WizardRouter>
         </main>
         <aside className="app-Notes">
           <PathIndicator />
