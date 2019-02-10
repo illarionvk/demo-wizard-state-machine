@@ -6,13 +6,14 @@ import { TotalPrice } from './total-price'
 
 import { stateNames } from '../../machines/wizard/states'
 
-const { DRIVETRAIN, PAINT, PEDAL, SADDLE, NOTE } = stateNames
+const { DRIVETRAIN, PAINT, PEDAL, SADDLE, NOTE, SUMMARY } = stateNames
 
 const v = {
-  drivetrain: [DRIVETRAIN, PAINT, PEDAL, SADDLE, NOTE],
-  paint: [PAINT, PEDAL, SADDLE, NOTE],
-  pedal: [PEDAL, SADDLE, NOTE],
-  saddle: [SADDLE, NOTE]
+  drivetrain: [DRIVETRAIN, PAINT, PEDAL, SADDLE, NOTE, SUMMARY],
+  paint: [PAINT, PEDAL, SADDLE, NOTE, SUMMARY],
+  pedal: [PEDAL, SADDLE, NOTE, SUMMARY],
+  saddle: [SADDLE, NOTE, SUMMARY],
+  note: [SUMMARY]
 }
 
 export const Summary = function Summary(props) {
@@ -21,14 +22,16 @@ export const Summary = function Summary(props) {
   } = props
 
   return (
-    <div>
-      <h4>Summary</h4>
-      <Selected assetName="bicycle" />
-      {includes(p, v.drivetrain) ? <Selected assetName="drivetrain" /> : null}
-      {includes(p, v.paint) ? <Selected assetName="paint" /> : null}
-      {includes(p, v.pedal) ? <Selected assetName="pedal" /> : null}
-      {includes(p, v.saddle) ? <Selected assetName="saddle" /> : null}
+    <section className="app-Summary">
+      <h4 className="app-Summary-title">Summary</h4>
+      <div className="app-Summary-items">
+        <Selected assetName="bicycle" />
+        {includes(p, v.drivetrain) ? <Selected assetName="drivetrain" /> : null}
+        {includes(p, v.paint) ? <Selected assetName="paint" /> : null}
+        {includes(p, v.pedal) ? <Selected assetName="pedal" /> : null}
+        {includes(p, v.saddle) ? <Selected assetName="saddle" /> : null}
+      </div>
       <TotalPrice />
-    </div>
+    </section>
   )
 }

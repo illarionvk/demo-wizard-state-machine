@@ -345,6 +345,21 @@ select[multiple] { height: auto; background-image: none; }
 
 .o-rte .figure > .caption { margin: 1em 0; font-size: 0.8em; font-style: italic; }
 
+/* ===================================================== */
+/* Summary */
+/* ===================================================== */
+.app-Summary-item { display: flex; flex-flow: row nowrap; justify-content: stretch; align-items: flex-start; position: relative; margin: 0.625rem 0; padding: 0.625rem; }
+
+.app-Summary-itemIcon { flex: 0 0 4rem; }
+
+.app-Summary-itemDetails { flex: 1 1 100%; padding-left: 1.25rem; }
+
+.app-Summary-itemType { font-size: 0.625rem; }
+
+.app-Summary-itemTitle { font-size: 0.875rem; font-weight: 700; }
+
+.app-Summary-itemSubtitle { margin: 0.5em 0 0 0; font-size: 0.625rem; }
+
 body { background-color: #eee; }
 
 .app-Main { max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }

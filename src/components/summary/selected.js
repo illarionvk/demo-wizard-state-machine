@@ -20,12 +20,18 @@ const Selected = function Selected(props) {
       : assetName
 
   return (
-    <div>
-      <Icons name={iconName} color={item.hex} />
-      <div>
-        <span>{startCase(assetName)}: </span>
-        <span> {item.title}</span>
-        {item.price ? <span> ${item.price}</span> : null}
+    <div className="app-Summary-item">
+      <div className="app-Summary-itemIcon">
+        <Icons name={iconName} color={item.hex} />
+      </div>
+      <div className="app-Summary-itemDetails">
+        <div className="app-Summary-itemType">{startCase(assetName)}</div>
+        <div className="app-Summary-itemTitle">{item.title}</div>
+        {item.price ? (
+          <div className="app-Summary-itemSubtitle">
+            {assetName === 'bicycle' ? '' : '+'}${item.price}
+          </div>
+        ) : null}
       </div>
     </div>
   )

@@ -1,0 +1,40 @@
+/* ===================================================== */
+/* Summary */
+/* ===================================================== */
+
+.app-Summary {
+  $_top: &;
+
+  &-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: flex-start;
+    position: relative;
+    margin: rem-calc(10) 0;
+    padding: rem-calc(10);
+  }
+
+  &-itemIcon {
+    flex: 0 0 rem-calc(64);
+  }
+
+  &-itemDetails {
+    flex: 1 1 100%;
+    padding-left: rem-calc(20);
+  }
+
+  &-itemType {
+    font-size: rem-calc(10);
+  }
+
+  &-itemTitle {
+    font-size: rem-calc(14);
+    font-weight: 700;
+  }
+
+  &-itemSubtitle {
+    margin: 0.5em 0 0 0;
+    font-size: rem-calc(10);
+  }
+}
