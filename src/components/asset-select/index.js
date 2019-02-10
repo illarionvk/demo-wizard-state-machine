@@ -5,17 +5,10 @@ import { Form, FormSpy } from 'react-final-form'
 import { map } from 'lodash/fp'
 
 import { update as updateCommission } from '../../ducks/commission'
+import { getAssetItems } from '../../selectors/asset'
 import { getSelectedId } from '../../selectors/commission'
 
 import { AssetRadioButton } from './radio-button'
-
-const getAllItems = (state, props) => {
-  const { allIds, byId } = state.assets[props.assetName]
-
-  return map(function(id) {
-    return byId[id]
-  }, allIds)
-}
 
 const AssetSelect = function AssetSelect(props) {
   const { assetName, items, selectedId, onSubmit } = props
@@ -49,7 +42,7 @@ const AssetSelect = function AssetSelect(props) {
 }
 
 const mapStateToProps = createStructuredSelector({
-  items: getAllItems,
+  items: getAssetItems,
   selectedId: getSelectedId
 })
 
