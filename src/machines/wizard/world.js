@@ -11,6 +11,8 @@ import { saddle } from '../../ducks/saddle'
 
 import { getSelectedId } from '../../selectors/commission'
 
+import { setCommissionDefaults } from './set-commission-defaults'
+
 const { PUBLIC_URL = '' } = process.env
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
@@ -50,5 +52,8 @@ export const world = {
     ]
 
     forEach(store.dispatch, actions)
+  },
+  setCommissionDefaults: function() {
+    setCommissionDefaults(store.getState(), store.dispatch)
   }
 }

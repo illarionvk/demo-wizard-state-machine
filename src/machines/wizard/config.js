@@ -15,7 +15,7 @@ const {
 } = stateNames
 
 const makeConfig = function makeConfig(world, initialState) {
-  const { loadBicycles, loadBicycleAssets } = world
+  const { loadBicycles, loadBicycleAssets, setCommissionDefaults } = world
 
   const reload = function reload() {
     global.location.reload(true)
@@ -35,6 +35,7 @@ const makeConfig = function makeConfig(world, initialState) {
         bootstrap: function* bootstrap(machine) {
           try {
             yield call(loadBicycles)
+            yield call(setCommissionDefaults)
             machine.fastForward()
           } catch (error) {
             yield makeState(FAILURE, error)
@@ -48,12 +49,13 @@ const makeConfig = function makeConfig(world, initialState) {
         advance: function* advance(machine) {
           try {
             yield call(loadBicycleAssets)
+            yield call(setCommissionDefaults)
             machine.fastForward()
           } catch (error) {
             yield makeState(FAILURE, error)
           }
         },
-        fastForward: function* fastForward() {
+        fastForward: function* componentsFastForward() {
           return yield makeState(DRIVETRAIN)
         }
       },

@@ -1,6 +1,9 @@
 import { createSelector } from 'reselect'
+import { keys } from 'lodash/fp'
 
 export const getSelectedAssets = (state) => state.commission.selected
+
+export const getAssetNames = (state) => keys(state.commission.selected)
 
 export const getSelectedId = createSelector(
   [getSelectedAssets, (_, props) => props.assetName],
