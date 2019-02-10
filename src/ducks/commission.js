@@ -9,6 +9,7 @@ import { produce } from 'immer'
 const initialState = {
   selected: {
     bicycle: null,
+    drivetrain: null,
     paint: null,
     pedal: null,
     saddle: null
