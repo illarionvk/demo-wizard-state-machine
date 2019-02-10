@@ -4,6 +4,7 @@ import { WizardRouter } from '../wizard-router'
 import { PathIndicator } from '../path-indicator'
 import { Navigation } from '../navigation'
 import { AssetSelect } from '../asset-select'
+import { EditNote } from '../edit-note'
 import { Summary } from '../summary'
 
 export class App extends React.Component {
@@ -17,6 +18,7 @@ export class App extends React.Component {
           <Navigation />
           <WizardRouter>
             <AssetSelect path="/select/:assetName" />
+            <EditNote path="/note" />
           </WizardRouter>
           <WizardRouter>
             <Summary path="/select/*" />
