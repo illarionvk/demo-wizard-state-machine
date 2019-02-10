@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { startCase } from 'lodash/fp'
+import { snakeCase, startCase } from 'lodash/fp'
 
 import { inferAsset } from '../../selectors/asset'
+
+import { Icons } from '../icons'
 
 const Selected = function Selected(props) {
   const { assetName, item } = props
@@ -12,11 +14,19 @@ const Selected = function Selected(props) {
     return null
   }
 
+  const iconName =
+    assetName === 'bicycle'
+      ? snakeCase(assetName + '-' + item.title)
+      : assetName
+
   return (
     <div>
-      <span>{startCase(assetName)}: </span>
-      <span> {item.title}</span>
-      {item.price ? <span> ${item.price}</span> : null}
+      <Icons name={iconName} color={item.hex} />
+      <div>
+        <span>{startCase(assetName)}: </span>
+        <span> {item.title}</span>
+        {item.price ? <span> ${item.price}</span> : null}
+      </div>
     </div>
   )
 }
