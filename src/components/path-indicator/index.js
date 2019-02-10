@@ -12,7 +12,7 @@ const PathIndicator = function(props) {
 const routed = function() {
   return (
     <WizardRouter>
-      <PathIndicator default />
+      <PathIndicator path="/*" />
     </WizardRouter>
   )
 }

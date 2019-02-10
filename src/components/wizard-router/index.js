@@ -1,8 +1,7 @@
 import React from 'react'
 import { Router, ServerLocation } from '@reach/router'
-import { connect as wire } from 'stent/lib/react'
 
-import { wizard } from '../../machines/wizard'
+import { wire, wizard } from '../../machines'
 
 /*
  * Wizard Router ignores browser history

@@ -6,4 +6,4 @@ import { wizard } from './wizard'
 
 Machine.addMiddleware([Logger])
 
-export { connect, wizard }
+export { connect as wire, wizard }
