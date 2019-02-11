@@ -15,9 +15,9 @@ const AssetSelect = function AssetSelect(props) {
 
   const renderFormContent = function() {
     return (
-      <>
+      <div className="app-RadioButtons">
         <FormSpy onChange={onSubmit} />
-        <ul>
+        <ul className="app-RadioButtons-items">
           {map(function(item) {
             return (
               <AssetRadioButton
@@ -28,7 +28,7 @@ const AssetSelect = function AssetSelect(props) {
             )
           }, items)}
         </ul>
-      </>
+      </div>
     )
   }
 

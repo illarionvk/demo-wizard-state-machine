@@ -10,15 +10,21 @@ export const AssetRadioButton = function(props) {
   const id = kebabCase([assetName, value].join('-'))
 
   return (
-    <div>
+    <div className="app-RadioButtons-item">
       <Field
+        className="app-RadioButtons-itemRadio"
         component="input"
         type="radio"
         id={id}
         name={assetName}
         value={value}
       />
-      <label htmlFor={id}>{title}</label>
+      <div className="app-RadioButtons-itemContent">
+        <div className="app-RadioButtons-itemFakeButton">{title}</div>
+        <label className="app-RadioButtons-itemLabel" htmlFor={id}>
+          {title}
+        </label>
+      </div>
     </div>
   )
 }
