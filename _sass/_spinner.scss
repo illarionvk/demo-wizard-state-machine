@@ -1,0 +1,30 @@
+/* ===================================================== */
+/* Spinner */
+/* ===================================================== */
+
+.app-Spinner {
+  $_top: &;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 rem-calc(10);
+
+  &-icon {
+    width: 100%;
+    max-width: rem-calc(80);
+    animation: app-spinner infinite 3s linear;
+  }
+}
+
+@keyframes app-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

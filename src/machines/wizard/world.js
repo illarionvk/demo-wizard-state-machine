@@ -27,9 +27,6 @@ export const world = {
       url: PUBLIC_URL + '/data/bicycles.json'
     })
 
-    // Intentional delay
-    await sleep(100)
-
     store.dispatch(bicycle.add(data))
   },
   loadBicycleAssets: async function loadBicycleAssets() {
@@ -38,6 +35,9 @@ export const world = {
     if (!id) {
       throw new Error('Bicycle ID is invalid')
     }
+
+    // Intentional delay
+    await sleep(1500)
 
     const { data } = await axios({
       url: PUBLIC_URL + `/data/bicycles/${id}.json`

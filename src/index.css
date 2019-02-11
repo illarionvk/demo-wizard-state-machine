@@ -352,6 +352,8 @@ body { background-color: #d7d7e4; }
 
 .app-Layout { display: flex; flex-flow: column nowrap; justify-content: stretch; align-items: center; height: 100vh; }
 
+.app-Layout-main { flex: 0 1 100%; width: 100%; }
+
 /* ===================================================== */
 /* Header */
 /* ===================================================== */
@@ -392,7 +394,7 @@ body { background-color: #d7d7e4; }
 /* ===================================================== */
 /* Main */
 /* ===================================================== */
-.app-Main { flex: 0 1 100%; width: 100%; padding: 0 0.625rem; }
+.app-Main { width: 100%; height: 100%; padding: 0 0.625rem; }
 
 .app-Main-container { width: 100%; max-width: 26.25rem; margin: 0 auto; height: 100%; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
 
@@ -442,6 +444,23 @@ body { background-color: #d7d7e4; }
 .app-Summary-itemTitle { font-size: 0.875rem; font-weight: 700; }
 
 .app-Summary-itemSubtitle { margin: 0.5em 0 0 0; font-size: 0.6875rem; }
+
+/* ===================================================== */
+/* Spinner */
+/* ===================================================== */
+.app-Spinner { display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 0 0.625rem; }
+
+.app-Spinner-icon { width: 100%; max-width: 5rem; -webkit-animation: app-spinner infinite 3s linear; animation: app-spinner infinite 3s linear; }
+
+@-webkit-keyframes app-spinner { from { -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes app-spinner { from { -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 @media print { /* MQPacker */
   * { background: transparent !important; box-shadow: none !important; color: black !important; text-shadow: none !important; }

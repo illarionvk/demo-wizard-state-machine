@@ -2,31 +2,25 @@ import React from 'react'
 
 import { WizardRouter } from '../wizard-router'
 import { PathIndicator } from '../path-indicator'
-import { Navigation } from '../navigation'
-import { AssetSelect } from '../asset-select'
-import { EditNote } from '../edit-note'
-import { Summary } from '../summary'
 import { Header } from '../header'
+import { Spinner } from '../spinner'
+import { Main } from '../main'
+
+import { stateNames } from '../../machines/wizard/states'
+
+const { IDLE, INITIALIZING, LOADING } = stateNames
 
 export class App extends React.Component {
   render() {
     return (
       <div className="app-Layout">
         <Header />
-        <main className="app-Main">
-          <div className="app-Main-container">
-            <Navigation />
-            <WizardRouter>
-              <AssetSelect path="/select/:assetName" />
-              <EditNote path="/note" />
-            </WizardRouter>
-            <WizardRouter>
-              <Summary path="/select/*" />
-              <Summary path="/note" />
-              <Summary path="/summary" />
-            </WizardRouter>
-          </div>
-        </main>
+        <WizardRouter className="app-Layout-main">
+          <Spinner path={IDLE} />
+          <Spinner path={INITIALIZING} />
+          <Spinner path={LOADING} />
+          <Main path="/*" />
+        </WizardRouter>
         <footer className="app-Footer">
           <div className="app-Footer-container">
             <PathIndicator />

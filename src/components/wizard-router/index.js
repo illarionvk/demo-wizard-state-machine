@@ -9,11 +9,11 @@ import { wire, wizard } from '../../machines'
  */
 
 const WizardRouter = function WizardRouter(props) {
-  const { children, url = '/' } = props
+  const { className, children, url = '/' } = props
 
   return (
     <ServerLocation url={url}>
-      <Router>{children}</Router>
+      <Router className={className}>{children}</Router>
     </ServerLocation>
   )
 }
