@@ -5,7 +5,26 @@
 .app-Navigation {
   $_top: &;
 
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 0 rem-calc(10) 0;
+
+  &-titleContainer {
+    flex: 0 1 100%;
+    padding: rem-calc(5);
+  }
+
+  &-title {
+    margin: 0;
+    font-size: rem-calc(18);
+    font-weight: $global-weight-bold;
+  }
+
+  &-buttons {
+    flex: 0 0 rem-calc(80 * 2)
+  }
 
   &-button {
     -webkit-appearance: none;

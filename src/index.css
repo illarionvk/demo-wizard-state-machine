@@ -373,7 +373,13 @@ body { background-color: #d7d7e4; }
 /* ===================================================== */
 /* Navigation */
 /* ===================================================== */
-.app-Navigation { margin: 0 0 0.625rem 0; }
+.app-Navigation { display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center; margin: 0 0 0.625rem 0; }
+
+.app-Navigation-titleContainer { flex: 0 1 100%; padding: 0.3125rem; }
+
+.app-Navigation-title { margin: 0; font-size: 1.125rem; font-weight: bold; }
+
+.app-Navigation-buttons { flex: 0 0 10rem; }
 
 .app-Navigation-button { -webkit-appearance: none; -moz-appearance: none; display: inline-block; position: relative; cursor: pointer; vertical-align: middle; margin: 0.25em; padding: 1em 1.5em; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 0.75rem; font-weight: bold; line-height: 1; letter-spacing: 0.0625em; text-align: center; text-decoration: none; text-transform: uppercase; background-color: #7b95f9; color: #ffffff; border-radius: 0.3125em; transition: background-color 250ms ease-out, border-color 250ms ease-in-out; }
 
