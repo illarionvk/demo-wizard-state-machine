@@ -14,12 +14,12 @@ const Note = function Note(props) {
   }
 
   return (
-    <div className="app-Summary-item">
+    <div className="app-Summary-item" data-name="note">
       <div className="app-Summary-itemIcon">
         <Icons name="edit" />
       </div>
       <div className="app-Summary-itemDetails">
-        <div className="app-Summary-itemTitle">Note</div>
+        <div className="app-Summary-itemTitle">Notes</div>
         <div className="app-Summary-itemSubtitle">
           <pre>{note}</pre>
         </div>

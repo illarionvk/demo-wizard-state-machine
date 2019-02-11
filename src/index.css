@@ -126,7 +126,7 @@ a:hover, a:focus { color: #1468a0; }
 
 a img { border: 0; }
 
-hr { clear: both; max-width: 25rem; height: 0; margin: 1.25rem auto; border-top: 0; border-right: 0; border-bottom: 1px solid #cacaca; border-left: 0; }
+hr { clear: both; max-width: 26.25rem; height: 0; margin: 1.25rem auto; border-top: 0; border-right: 0; border-bottom: 1px solid #cacaca; border-left: 0; }
 
 ul, ol, dl { margin-bottom: 1rem; list-style-position: outside; line-height: 1.6; }
 
@@ -276,9 +276,9 @@ select[multiple] { height: auto; background-image: none; }
 /* ===================================================== */
 /* General Objects */
 /* ===================================================== */
-.o-row { width: 100%; max-width: 25rem; margin: 0 auto; }
+.o-row { width: 100%; max-width: 26.25rem; margin: 0 auto; }
 
-.o-container { width: 100%; max-width: 25rem; margin: 0 auto; padding: 0 0.75rem; }
+.o-container { width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0 0.75rem; }
 
 /* ===================================================== */
 /* User Content (RTE) */
@@ -357,7 +357,7 @@ body { background-color: #d7d7e4; }
 /* ===================================================== */
 .app-Header { width: 100%; margin: 1.25rem auto; padding: 0 0.625rem; }
 
-.app-Header-container { max-width: 25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
+.app-Header-container { max-width: 26.25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
 
 .app-Header-logo { width: 100%; max-width: 3rem; margin: 0 auto; }
 
@@ -368,7 +368,7 @@ body { background-color: #d7d7e4; }
 /* ===================================================== */
 .app-Footer { width: 100%; margin: 1.25rem auto; padding: 0 0.625rem; }
 
-.app-Footer-container { width: 100%; max-width: 25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
+.app-Footer-container { width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
 
 /* ===================================================== */
 /* Navigation */
@@ -394,16 +394,20 @@ body { background-color: #d7d7e4; }
 /* ===================================================== */
 .app-Main { flex: 0 1 100%; width: 100%; padding: 0 0.625rem; }
 
-.app-Main-container { width: 100%; max-width: 25rem; margin: 0 auto; height: 100%; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
+.app-Main-container { width: 100%; max-width: 26.25rem; margin: 0 auto; height: 100%; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
 
 /* ===================================================== */
 /* Summary */
 /* ===================================================== */
-.app-Summary-item { display: flex; flex-flow: row nowrap; justify-content: stretch; align-items: flex-start; position: relative; margin: 0.625rem 0; padding: 0.625rem; }
+.app-Summary-items { display: flex; flex-flow: row wrap; justify-content: stretch; align-items: flex-start; }
+
+.app-Summary-item { flex: 0 1 50%; display: flex; flex-flow: row nowrap; justify-content: stretch; align-items: flex-start; position: relative; margin: 0.625rem 0; padding: 0.625rem; }
+
+.app-Summary-item[data-name="note"] { flex: 0 0 100%; }
 
 .app-Summary-itemIcon { flex: 0 0 4rem; }
 
-.app-Summary-itemDetails { flex: 1 1 100%; padding-left: 1.25rem; }
+.app-Summary-itemDetails { flex: 1 1 100%; padding-left: 0.9375rem; }
 
 .app-Summary-itemType { font-size: 0.625rem; }
 

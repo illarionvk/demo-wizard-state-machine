@@ -5,7 +5,15 @@
 .app-Summary {
   $_top: &;
 
+  &-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    align-items: flex-start;
+  }
+
   &-item {
+    flex: 0 1 50%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: stretch;
@@ -13,6 +21,10 @@
     position: relative;
     margin: rem-calc(10) 0;
     padding: rem-calc(10);
+
+    &[data-name="note"] {
+      flex: 0 0 100%;
+    }
   }
 
   &-itemIcon {
@@ -21,7 +33,7 @@
 
   &-itemDetails {
     flex: 1 1 100%;
-    padding-left: rem-calc(20);
+    padding-left: rem-calc(15);
   }
 
   &-itemType {

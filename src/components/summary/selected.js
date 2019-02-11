@@ -20,7 +20,7 @@ const Selected = function Selected(props) {
       : assetName
 
   return (
-    <div className="app-Summary-item">
+    <div className="app-Summary-item" data-name={assetName}>
       <div className="app-Summary-itemIcon">
         <Icons name={iconName} color={item.hex} />
       </div>
