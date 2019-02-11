@@ -1,0 +1,26 @@
+/* ===================================================== */
+/* Failure */
+/* ===================================================== */
+
+.app-Failure {
+  $_top: &;
+
+  width: 100%;
+  height: 100%;
+  padding: 0 rem-calc(10);
+
+  &-container {
+    width: 100%;
+    max-width: $global-width;
+    margin: 0 auto;
+    height: 100%;
+    padding: rem-calc(15);
+    background-color: $bg-light;
+    border-radius: $global-border-radius;
+  }
+
+  &-title {
+    font-size: rem-calc(20);
+  }
+}
+

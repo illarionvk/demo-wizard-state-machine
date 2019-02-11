@@ -5,10 +5,11 @@ import { PathIndicator } from '../path-indicator'
 import { Header } from '../header'
 import { Spinner } from '../spinner'
 import { Main } from '../main'
+import { MachineFailure } from '../failure'
 
 import { stateNames } from '../../machines/wizard/states'
 
-const { IDLE, INITIALIZING, LOADING } = stateNames
+const { IDLE, INITIALIZING, FAILURE, LOADING } = stateNames
 
 export class App extends React.Component {
   render() {
@@ -19,6 +20,7 @@ export class App extends React.Component {
           <Spinner path={IDLE} />
           <Spinner path={INITIALIZING} />
           <Spinner path={LOADING} />
+          <MachineFailure path={FAILURE} />
           <Main path="/*" />
         </WizardRouter>
         <footer className="app-Footer">
