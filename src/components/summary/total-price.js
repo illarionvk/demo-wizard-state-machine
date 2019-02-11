@@ -7,7 +7,7 @@ import { inferTotalPrice } from '../../selectors/price'
 const TotalPrice = function TotalPrice(props) {
   const { price } = props
 
-  return <div>Total: ${price}</div>
+  return <div className="app-Summary-totalPrice">Total: ${price}</div>
 }
 
 const mapStateToProps = createStructuredSelector({

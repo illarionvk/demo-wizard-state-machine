@@ -407,7 +407,7 @@ body { background-color: #d7d7e4; }
 
 .app-RadioButtons-itemRadio { position: absolute !important; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-.app-RadioButtons-itemFakeButton { -webkit-appearance: none; -moz-appearance: none; display: inline-block; position: relative; cursor: pointer; vertical-align: middle; margin: 0; padding: 1em 1.5em; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 0.75rem; font-weight: bold; line-height: 1; letter-spacing: 0.0625em; text-align: center; text-decoration: none; text-transform: uppercase; background-color: #fefefe; color: #303030; border-radius: 0.3125em; transition: background-color 250ms ease-out, border-color 250ms ease-in-out; }
+.app-RadioButtons-itemFakeButton { -webkit-appearance: none; -moz-appearance: none; display: inline-block; position: relative; cursor: pointer; vertical-align: middle; margin: 0; padding: 1em 1.5em; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 0.75rem; font-weight: bold; line-height: 1; letter-spacing: 0.0625em; text-align: center; text-decoration: none; background-color: #fefefe; color: #303030; border: 0.0625rem solid #303030; border-radius: 0.3125em; transition: background-color 250ms ease-out, border-color 250ms ease-in-out; }
 
 .app-RadioButtons-itemRadio:checked + .app-RadioButtons-itemContent .app-RadioButtons-itemFakeButton { background-color: #303030; color: #fefefe; }
 
@@ -416,8 +416,17 @@ body { background-color: #d7d7e4; }
 .app-RadioButtons-itemLabel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; overflow: hidden; cursor: pointer; opacity: 0; }
 
 /* ===================================================== */
+/* Edit Note */
+/* ===================================================== */
+.app-EditNote-label { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 0.9375rem; font-weight: bold; }
+
+/* ===================================================== */
 /* Summary */
 /* ===================================================== */
+.app-Summary-title { font-size: 0.9375rem; font-weight: bold; text-transform: uppercase; }
+
+.app-Summary-totalPrice { margin: 0.625rem auto; font-size: 0.8125rem; }
+
 .app-Summary-items { display: flex; flex-flow: row wrap; justify-content: stretch; align-items: flex-start; }
 
 .app-Summary-item { flex: 0 1 50%; display: flex; flex-flow: row nowrap; justify-content: stretch; align-items: flex-start; position: relative; margin: 0.625rem 0; padding: 0.625rem; }
@@ -428,11 +437,11 @@ body { background-color: #d7d7e4; }
 
 .app-Summary-itemDetails { flex: 1 1 100%; padding-left: 0.9375rem; }
 
-.app-Summary-itemType { font-size: 0.625rem; }
+.app-Summary-itemType { font-size: 0.6875rem; }
 
 .app-Summary-itemTitle { font-size: 0.875rem; font-weight: 700; }
 
-.app-Summary-itemSubtitle { margin: 0.5em 0 0 0; font-size: 0.625rem; }
+.app-Summary-itemSubtitle { margin: 0.5em 0 0 0; font-size: 0.6875rem; }
 
 @media print { /* MQPacker */
   * { background: transparent !important; box-shadow: none !important; color: black !important; text-shadow: none !important; }

@@ -45,9 +45,10 @@
     letter-spacing: 0.0625em;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     background-color: $white;
     color: $text-primary;
+    border: rem-calc(1) solid $text-primary;
     border-radius: $global-border-radius;
     transition: background-color 250ms ease-out, border-color 250ms ease-in-out;
 

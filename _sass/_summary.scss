@@ -5,6 +5,17 @@
 .app-Summary {
   $_top: &;
 
+  &-title {
+    font-size: rem-calc(15);
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+  }
+
+  &-totalPrice {
+    margin: rem-calc(10) auto;
+    font-size: rem-calc(13);
+  }
+
   &-items {
     display: flex;
     flex-flow: row wrap;
@@ -37,7 +48,7 @@
   }
 
   &-itemType {
-    font-size: rem-calc(10);
+    font-size: rem-calc(11);
   }
 
   &-itemTitle {
@@ -47,6 +58,6 @@
 
   &-itemSubtitle {
     margin: 0.5em 0 0 0;
-    font-size: rem-calc(10);
+    font-size: rem-calc(11);
   }
 }

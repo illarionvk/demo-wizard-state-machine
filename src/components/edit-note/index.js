@@ -13,19 +13,22 @@ const EditNote = function EditNote(props) {
 
   const renderFormContent = function() {
     return (
-      <>
+      <div className="app-EditNote">
         <FormSpy onChange={onSubmit} />
-        <div>
-          <label htmlFor={id}>Note</label>
+        <div className="app-EditNote-container">
+          <label className="app-EditNote-label u-vhide" htmlFor={id}>
+            Note
+          </label>
           <Field
             component="textarea"
             name="note"
+            rows="5"
             id={id}
             placeholder={placeholder}
             value={note}
           />
         </div>
-      </>
+      </div>
     )
   }
 
