@@ -14,16 +14,18 @@ export class App extends React.Component {
       <div className="app-Layout">
         <Header />
         <main className="app-Main">
-          <Navigation />
-          <WizardRouter>
-            <AssetSelect path="/select/:assetName" />
-            <EditNote path="/note" />
-          </WizardRouter>
-          <WizardRouter>
-            <Summary path="/select/*" />
-            <Summary path="/note" />
-            <Summary path="/summary" />
-          </WizardRouter>
+          <div className="app-Main-container">
+            <Navigation />
+            <WizardRouter>
+              <AssetSelect path="/select/:assetName" />
+              <EditNote path="/note" />
+            </WizardRouter>
+            <WizardRouter>
+              <Summary path="/select/*" />
+              <Summary path="/note" />
+              <Summary path="/summary" />
+            </WizardRouter>
+          </div>
         </main>
         <footer className="app-Footer">
           <div className="app-Footer-container">

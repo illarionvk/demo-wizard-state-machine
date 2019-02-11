@@ -350,24 +350,32 @@ select[multiple] { height: auto; background-image: none; }
 /* ===================================================== */
 body { background-color: #d7d7e4; }
 
-.app-Layout { display: flex; flex-flow: column nowrap; justify-content: stretch; align-items: stretch; height: 100vh; }
-
-.app-Main { flex: 0 1 100%; width: 100%; max-width: 25rem; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }
-
-.app-Footer { width: 100%; background-color: #f7f7f7; }
-
-.app-Footer-container { width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; }
+.app-Layout { display: flex; flex-flow: column nowrap; justify-content: stretch; align-items: center; height: 100vh; }
 
 /* ===================================================== */
 /* Header */
 /* ===================================================== */
-.app-Header { width: 100%; margin: 1.25rem auto; }
+.app-Header { width: 100%; margin: 1.25rem auto; padding: 0 0.625rem; }
 
-.app-Header-container { max-width: 25rem; margin: 0 auto; padding: 0.625rem; background-color: #ffffff; border-radius: 0.3125em; }
+.app-Header-container { max-width: 25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
 
 .app-Header-logo { width: 100%; max-width: 3rem; margin: 0 auto; }
 
 .app-Header-title { font-size: 0.875rem; font-weight: bold; margin: 0; text-align: center; }
+
+/* ===================================================== */
+/* Footer */
+/* ===================================================== */
+.app-Footer { width: 100%; margin: 1.25rem auto; padding: 0 0.625rem; }
+
+.app-Footer-container { width: 100%; max-width: 25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
+
+/* ===================================================== */
+/* Main */
+/* ===================================================== */
+.app-Main { flex: 0 1 100%; width: 100%; padding: 0 0.625rem; }
+
+.app-Main-container { width: 100%; max-width: 25rem; margin: 0 auto; height: 100%; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
 
 /* ===================================================== */
 /* Summary */

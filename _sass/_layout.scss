@@ -12,27 +12,6 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: stretch;
-  align-items: stretch;
+  align-items: center;
   height: 100vh;
-}
-
-.app-Main {
-  flex: 0 1 100%;
-  width: 100%;
-  max-width: $global-width;
-  margin: 0 auto;
-  padding: 0 rem-calc(20);
-  background-color: $white;
-}
-
-.app-Footer {
-  width: 100%;
-  background-color: #f7f7f7;
-
-  &-container {
-    width: 100%;
-    max-width: rem-calc(420);
-    margin: 0 auto;
-    padding: 0 rem-calc(20);
-  }
 }

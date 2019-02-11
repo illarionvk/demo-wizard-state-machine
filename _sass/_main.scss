@@ -1,32 +1,22 @@
 /* ===================================================== */
-/* Header */
+/* Main */
 /* ===================================================== */
 
-.app-Header {
+.app-Main {
   $_top: &;
 
+  flex: 0 1 100%;
   width: 100%;
-  margin: rem-calc(20) auto;
   padding: 0 rem-calc(10);
 
   &-container {
+    width: 100%;
     max-width: $global-width;
     margin: 0 auto;
+    height: 100%;
     padding: rem-calc(15);
     background-color: $bg-light;
     border-radius: $global-border-radius;
   }
-
-  &-logo {
-    width: 100%;
-    max-width: rem-calc(48);
-    margin: 0 auto;
-  }
-
-  &-title {
-    font-size: rem-calc(14);
-    font-weight: $global-weight-bold;
-    margin: 0;
-    text-align: center;
-  }
 }
+

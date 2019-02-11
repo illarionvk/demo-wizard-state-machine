@@ -1,8 +1,8 @@
 /* ===================================================== */
-/* Header */
+/* Footer */
 /* ===================================================== */
 
-.app-Header {
+.app-Footer {
   $_top: &;
 
   width: 100%;
@@ -10,23 +10,14 @@
   padding: 0 rem-calc(10);
 
   &-container {
+    width: 100%;
     max-width: $global-width;
     margin: 0 auto;
     padding: rem-calc(15);
     background-color: $bg-light;
     border-radius: $global-border-radius;
-  }
 
-  &-logo {
-    width: 100%;
-    max-width: rem-calc(48);
-    margin: 0 auto;
-  }
-
-  &-title {
-    font-size: rem-calc(14);
-    font-weight: $global-weight-bold;
-    margin: 0;
-    text-align: center;
+    @include breakpoint(medium) {
+    }
   }
 }
