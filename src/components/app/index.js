@@ -6,14 +6,13 @@ import { Navigation } from '../navigation'
 import { AssetSelect } from '../asset-select'
 import { EditNote } from '../edit-note'
 import { Summary } from '../summary'
+import { Header } from '../header'
 
 export class App extends React.Component {
   render() {
     return (
       <div className="app-Layout">
-        <header className="app-Header">
-          <h1>Wizard State Machine Demo</h1>
-        </header>
+        <Header />
         <main className="app-Main">
           <Navigation />
           <WizardRouter>

@@ -3,7 +3,7 @@
 /* ===================================================== */
 
 body {
-  background-color: #d7d7e4;
+  background-color: $bg-main;
 }
 
 .app-Layout {
@@ -16,14 +16,10 @@ body {
   height: 100vh;
 }
 
-.app-Header {
-  background-color: #f7f7f7;
-}
-
 .app-Main {
   flex: 0 1 100%;
   width: 100%;
-  max-width: rem-calc(420);
+  max-width: $global-width;
   margin: 0 auto;
   padding: 0 rem-calc(20);
   background-color: $white;

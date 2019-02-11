@@ -126,7 +126,7 @@ a:hover, a:focus { color: #1468a0; }
 
 a img { border: 0; }
 
-hr { clear: both; max-width: 75rem; height: 0; margin: 1.25rem auto; border-top: 0; border-right: 0; border-bottom: 1px solid #cacaca; border-left: 0; }
+hr { clear: both; max-width: 25rem; height: 0; margin: 1.25rem auto; border-top: 0; border-right: 0; border-bottom: 1px solid #cacaca; border-left: 0; }
 
 ul, ol, dl { margin-bottom: 1rem; list-style-position: outside; line-height: 1.6; }
 
@@ -276,9 +276,9 @@ select[multiple] { height: auto; background-image: none; }
 /* ===================================================== */
 /* General Objects */
 /* ===================================================== */
-.o-row { width: 100%; max-width: 75rem; margin: 0 auto; }
+.o-row { width: 100%; max-width: 25rem; margin: 0 auto; }
 
-.o-container { width: 100%; max-width: 75rem; margin: 0 auto; padding: 0 0.75rem; }
+.o-container { width: 100%; max-width: 25rem; margin: 0 auto; padding: 0 0.75rem; }
 
 /* ===================================================== */
 /* User Content (RTE) */
@@ -352,13 +352,22 @@ body { background-color: #d7d7e4; }
 
 .app-Layout { display: flex; flex-flow: column nowrap; justify-content: stretch; align-items: stretch; height: 100vh; }
 
-.app-Header { background-color: #f7f7f7; }
-
-.app-Main { flex: 0 1 100%; width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }
+.app-Main { flex: 0 1 100%; width: 100%; max-width: 25rem; margin: 0 auto; padding: 0 1.25rem; background-color: #fefefe; }
 
 .app-Footer { width: 100%; background-color: #f7f7f7; }
 
 .app-Footer-container { width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ===================================================== */
+/* Header */
+/* ===================================================== */
+.app-Header { width: 100%; margin: 1.25rem auto; }
+
+.app-Header-container { max-width: 25rem; margin: 0 auto; padding: 0.625rem; background-color: #ffffff; border-radius: 0.3125em; }
+
+.app-Header-logo { width: 100%; max-width: 3rem; margin: 0 auto; }
+
+.app-Header-title { font-size: 0.875rem; font-weight: bold; margin: 0; text-align: center; }
 
 /* ===================================================== */
 /* Summary */

@@ -1,0 +1,31 @@
+/* ===================================================== */
+/* Header */
+/* ===================================================== */
+
+.app-Header {
+  $_top: &;
+
+  width: 100%;
+  margin: rem-calc(20) auto;
+
+  &-container {
+    max-width: $global-width;
+    margin: 0 auto;
+    padding: rem-calc(10);
+    background-color: $bg-light;
+    border-radius: $global-border-radius;
+  }
+
+  &-logo {
+    width: 100%;
+    max-width: rem-calc(48);
+    margin: 0 auto;
+  }
+
+  &-title {
+    font-size: rem-calc(14);
+    font-weight: $global-weight-bold;
+    margin: 0;
+    text-align: center;
+  }
+}

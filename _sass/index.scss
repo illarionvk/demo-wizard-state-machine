@@ -4,6 +4,8 @@
 
 @import './colors';
 
+$global-border-radius: 0.3125em;
+
 // Vendor Components
 // ===============================================
 
@@ -49,4 +51,5 @@ $modular-scale-base: 1rem;
 @import 'rte';
 
 @import 'layout';
+@import 'header';
 @import 'summary';
