@@ -8,7 +8,12 @@ const AdvanceButton = function AdvanceButton(props) {
   const onClick = advance
 
   return (
-    <button type="button" disabled={disabled} onClick={onClick}>
+    <button
+      className="app-Navigation-button"
+      type="button"
+      disabled={disabled}
+      onClick={onClick}
+    >
       Next
     </button>
   )

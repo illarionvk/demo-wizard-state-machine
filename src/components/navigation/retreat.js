@@ -8,7 +8,12 @@ const RetreatButton = function RetreatButton(props) {
   const onClick = retreat
 
   return (
-    <button type="button" disabled={disabled} onClick={onClick}>
+    <button
+      className="app-Navigation-button"
+      type="button"
+      disabled={disabled}
+      onClick={onClick}
+    >
       Back
     </button>
   )

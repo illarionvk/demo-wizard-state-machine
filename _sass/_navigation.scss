@@ -1,0 +1,46 @@
+/* ===================================================== */
+/* Navigation */
+/* ===================================================== */
+
+.app-Navigation {
+  $_top: &;
+
+  margin: 0 0 rem-calc(10) 0;
+
+  &-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0.25em;
+    padding: 1em 1.5em;
+    font-family: $body-font-family;
+    font-size: rem-calc(12);
+    font-weight: $global-weight-bold;
+    line-height: 1;
+    letter-spacing: 0.0625em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $button-background;
+    color: $button-color;
+    border-radius: $global-border-radius;
+    transition: background-color 250ms ease-out, border-color 250ms ease-in-out;
+
+    &:hover, &:focus {
+      outline: none;
+      background-color: $button-background-hover;
+      color: $button-color-hover;
+    }
+
+    &:disabled {
+      background-color: $gray-50;
+
+      &:hover, &:focus {
+        background-color: $gray-50;
+      }
+    }
+  }
+}

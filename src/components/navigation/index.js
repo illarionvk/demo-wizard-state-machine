@@ -5,9 +5,11 @@ import { RetreatButton } from './retreat'
 
 export const Navigation = function Navigation() {
   return (
-    <div>
-      <AdvanceButton />
-      <RetreatButton />
+    <div className="app-Navigation">
+      <div className="app-Navigation-buttons">
+        <RetreatButton />
+        <AdvanceButton />
+      </div>
     </div>
   )
 }

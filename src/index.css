@@ -331,9 +331,9 @@ select[multiple] { height: auto; background-image: none; }
 
 .o-rte blockquote h1, .o-rte blockquote h2, .o-rte blockquote h3, .o-rte blockquote h4, .o-rte blockquote h5, .o-rte blockquote h6 { line-height: 1.4; }
 
-.o-rte a:not(.o-button) { border-bottom: 0.0625rem solid #303030; }
+.o-rte a:not(.o-button) { border-bottom: 0.0625rem solid #0067c5; }
 
-.o-rte a:not(.o-button):hover, .o-rte a:not(.o-button):focus { border-bottom-color: #303030; }
+.o-rte a:not(.o-button):hover, .o-rte a:not(.o-button):focus { border-bottom-color: #005aac; }
 
 .o-rte iframe, .o-rte object { max-width: 100%; }
 
@@ -369,6 +369,19 @@ body { background-color: #d7d7e4; }
 .app-Footer { width: 100%; margin: 1.25rem auto; padding: 0 0.625rem; }
 
 .app-Footer-container { width: 100%; max-width: 25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
+
+/* ===================================================== */
+/* Navigation */
+/* ===================================================== */
+.app-Navigation { margin: 0 0 0.625rem 0; }
+
+.app-Navigation-button { -webkit-appearance: none; -moz-appearance: none; display: inline-block; position: relative; cursor: pointer; vertical-align: middle; margin: 0.25em; padding: 1em 1.5em; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 0.75rem; font-weight: bold; line-height: 1; letter-spacing: 0.0625em; text-align: center; text-decoration: none; text-transform: uppercase; background-color: #7b95f9; color: #ffffff; border-radius: 0.3125em; transition: background-color 250ms ease-out, border-color 250ms ease-in-out; }
+
+.app-Navigation-button:hover, .app-Navigation-button:focus { outline: none; background-color: #6c7fef; color: #ffffff; }
+
+.app-Navigation-button:disabled { background-color: #bfbebe; }
+
+.app-Navigation-button:disabled:hover, .app-Navigation-button:disabled:focus { background-color: #bfbebe; }
 
 /* ===================================================== */
 /* Main */
