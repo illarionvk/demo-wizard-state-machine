@@ -12,9 +12,10 @@
     left: 50%;
     transform: translateX($global-width / 2) translateZ(0);
     width: rem-calc(380);
+    max-height: 60%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
   }
 
   &-container {
