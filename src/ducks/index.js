@@ -1,8 +1,5 @@
 import { applyMiddleware, createStore, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension/logOnly'
-import { combineEpics, createEpicMiddleware } from 'redux-observable'
-
-import { updateUrlQuery } from '../epics/update-url-query'
 
 import { loggerMiddleware } from './logger'
 
@@ -41,18 +38,13 @@ const rootReducer = combineReducers({
   commission: commissionReducer
 })
 
-const rootEpic = combineEpics(updateUrlQuery)
-const epicMiddleware = createEpicMiddleware()
-
 const composeEnhancers = composeWithDevTools({})
 
 const store = createStore(
   rootReducer,
   initialState,
-  composeEnhancers(applyMiddleware(loggerMiddleware, epicMiddleware))
+  composeEnhancers(applyMiddleware(loggerMiddleware))
 )
-
-epicMiddleware.run(rootEpic)
 
 global[STORE] = store
 
