@@ -305,11 +305,11 @@ select[multiple] { height: auto; background-image: none; }
 
 .o-rte img { max-width: 100%; }
 
-.o-rte p { font-size: 1em; margin-bottom: 2em; }
+.o-rte p { font-size: 1em; margin-bottom: 1.5em; }
 
 .o-rte p:last-child { margin-bottom: 0; }
 
-.o-rte p + p { margin-top: -0.25em; }
+.o-rte p + p { margin-top: -0.5em; }
 
 .o-rte ul, .o-rte ol, .o-rte dl { font-size: 1em; }
 
@@ -371,6 +371,8 @@ body { background-color: #d7d7e4; }
 .app-Footer { width: 100%; margin: 1.25rem auto; padding: 0 0.625rem; }
 
 .app-Footer-container { width: 100%; max-width: 26.25rem; margin: 0 auto; padding: 0.9375rem; background-color: #ffffff; border-radius: 0.3125em; }
+
+.app-Footer-content { text-align: center; }
 
 /* ===================================================== */
 /* Navigation */

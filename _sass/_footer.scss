@@ -16,8 +16,9 @@
     padding: rem-calc(15);
     background-color: $bg-light;
     border-radius: $global-border-radius;
+  }
 
-    @include breakpoint(medium) {
-    }
+  &-content {
+    text-align: center;
   }
 }
