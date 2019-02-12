@@ -7,10 +7,10 @@ const PathIndicator = function(props) {
   } = props
 
   return (
-    <aside className="app-PathIndicator">
-      <span>Wizard path: </span>
-      <span>{pathname}</span>
-    </aside>
+    <section className="app-PathIndicator">
+      <h6 className="app-PathIndicator-title">Wizard path:</h6>
+      <div className="app-PathIndicator-path">{pathname}</div>
+    </section>
   )
 }
 

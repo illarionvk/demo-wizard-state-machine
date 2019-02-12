@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { WizardRouter } from '../wizard-router'
-import { PathIndicator } from '../path-indicator'
 import { Header } from '../header'
 import { Spinner } from '../spinner'
 import { Main } from '../main'
 import { MachineFailure } from '../failure'
 import { ErrorBoundary } from '../error-boundary'
+import { DevNotes } from '../devnotes'
 
 import { stateNames } from '../../machines/wizard/states'
 
@@ -28,7 +28,6 @@ export class App extends React.Component {
         </ErrorBoundary>
         <footer className="app-Footer">
           <div className="app-Footer-container">
-            <PathIndicator />
             <p>
               Icons designed by{' '}
               <a href="https://www.flaticon.com/authors/freepik">
@@ -46,6 +45,7 @@ export class App extends React.Component {
             </p>
           </div>
         </footer>
+        <DevNotes />
       </div>
     )
   }

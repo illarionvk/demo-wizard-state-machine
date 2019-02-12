@@ -1,0 +1,19 @@
+/* ===================================================== */
+/* Path Indicator */
+/* ===================================================== */
+
+.app-PathIndicator {
+  $_top: &;
+
+  margin: rem-calc(15) auto;
+
+  &-title {
+    font-size: rem-calc(12);
+    font-family: $font-family-monospace;
+  }
+
+  &-path {
+    font-size: rem-calc(12);
+    font-family: $font-family-monospace;
+  }
+}

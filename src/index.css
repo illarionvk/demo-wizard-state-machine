@@ -350,7 +350,7 @@ select[multiple] { height: auto; background-image: none; }
 /* ===================================================== */
 body { background-color: #d7d7e4; }
 
-.app-Layout { display: flex; flex-flow: column nowrap; justify-content: stretch; align-items: center; height: 100vh; }
+.app-Layout { display: flex; flex-flow: column nowrap; justify-content: stretch; align-items: center; height: 100vh; position: relative; overflow: hidden; }
 
 .app-Layout-main { flex: 0 1 100%; width: 100%; }
 
@@ -471,6 +471,26 @@ body { background-color: #d7d7e4; }
 
 .app-Failure-title { font-size: 1.25rem; }
 
+/* ===================================================== */
+/* Dev Notes */
+/* ===================================================== */
+.app-DevNotes { display: none; }
+
+.app-DevNotes-container { padding: 1.25rem; font-family: Consolas, "Liberation Mono", Courier, monospace; }
+
+.app-DevNotes-title { font-size: 1rem; font-weight: bold; font-family: Consolas, "Liberation Mono", Courier, monospace; }
+
+.app-DevNotes-notes { font-size: 0.875rem; }
+
+/* ===================================================== */
+/* Path Indicator */
+/* ===================================================== */
+.app-PathIndicator { margin: 0.9375rem auto; }
+
+.app-PathIndicator-title { font-size: 0.75rem; font-family: Consolas, "Liberation Mono", Courier, monospace; }
+
+.app-PathIndicator-path { font-size: 0.75rem; font-family: Consolas, "Liberation Mono", Courier, monospace; }
+
 @media print { /* MQPacker */
   * { background: transparent !important; box-shadow: none !important; color: black !important; text-shadow: none !important; }
   .show-for-print { display: block !important; }
@@ -517,7 +537,8 @@ body { background-color: #d7d7e4; }
   .large-text-center { text-align: center; }
   .large-text-justify { text-align: justify; } }
 
-@media screen and (min-width: 75em) { /* MQPacker */ }
+@media screen and (min-width: 75em) { /* MQPacker */
+  .app-DevNotes { display: block; position: absolute; top: 10rem; left: 50%; -webkit-transform: translateX(13.125rem) translateZ(0); transform: translateX(13.125rem) translateZ(0); width: 23.75rem; margin: 0; padding: 0; overflow: hidden; } }
 
 @media screen and (min-width: 90em) { /* MQPacker */ }
 
